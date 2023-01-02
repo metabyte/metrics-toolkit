@@ -9,7 +9,7 @@
                 <http:load-static-resource doc:name="Load static resource" doc:id="7aae6e23-0946-4fd6-a4ce-8459f9f08885" resourceBasePath="${mule.home}/apps/${app.name}/web/" />
             </when>
             <otherwise>
-                <logger level="DEBUG" doc:name="Web UI disabled" doc:id="f92de18d-3b3e-4086-b624-6076b9e8ba96" message="Web UI is disabled, so return NOT IMPLEMENTED" />
+                <logger level="DEBUG" doc:name="Web UI disabled" doc:id="f92de18d-3b3e-4086-b624-6076b9e8ba96" message="WARNING - Web UI is disabled, so return NOT IMPLEMENTED" />
                 <ee:transform doc:name="Set 501 - Not Implemented" doc:id="ee410da7-4012-4b35-a4ba-fe224ee4e23e">
                     <ee:message>
                         <ee:set-payload resource="dw/apikit/error-not-implemented.dwl" />
